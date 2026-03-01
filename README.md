@@ -22,85 +22,36 @@ A fully-featured **Telegram bot for students** to manage study tasks, track prog
 
 ---
 
-## **Setup & Installation**
+## **Setup & Installation on vps**
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone <repo_url>
-cd StudentTaskBot
-2️⃣ Install Python & Dependencies
-Requires Python 3.10+
-Bash
-Copy code
+git clone https://github.com/careless-coder95/Taskbot
+cd Taskbt
 pip install -r requirements.txt
-3️⃣ Add your Telegram Bot Token
-You have two options:
-Option 1: Using .env file (Recommended)
-Create a file named .env in the project root:
-Text
-Copy code
+```
+
+3️⃣ Add your Telegram Bot Token in env
+```
 BOT_TOKEN=123456789:ABCdefGHIjklMNOpqRS_TUVwxyz
-In TaskBot.py, the bot will automatically load the token using dotenv.
-Option 2: Directly in TaskBot.py
-Replace the token line:
-Python
-Copy code
-TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-Remove from dotenv import load_dotenv and load_dotenv() if using direct token.
-⚠️ Important: Never push your token to a public repository.
-4️⃣ Running on VPS
-Upload the repo to your VPS (using scp or GitHub clone).
+```
 Make sure Python 3.10+ is installed.
 Install dependencies:
-Bash
-Copy code
+```
 pip install -r requirements.txt
-Run the bot:
-Bash
-Copy code
-python TaskBot.py
-Keep the bot running:
+```
+Run the bot
+```
+python3 task.py
+```
 Use screen or tmux:
-Bash
-Copy code
+```
 screen -S StudentBot
 python TaskBot.py
+```
 # Press Ctrl+A then D to detach
-Or use systemd service for auto-start on reboot.
-Bot Usage
-Start the Bot
-/start → Displays welcome message + buttons:
-How to Use Me
-Student Mode
-Owner (link)
-Support (link)
-How to Use Me
-Explains bot features.
-Button to go to Student Mode.
-Student Mode
-Add Task → Step by step: Subject → Lesson → Title → Deadline.
-View Tasks → See all tasks with ✅/❌, Edit or Delete buttons.
-Progress / Stats → Shows a visual progress bar, completed tasks, and points.
-Back to Student Mode/Home → Navigate easily.
-Gamification
-Each completed task adds 1 point.
-Progress bar shows percentage completed visually: [█████░░░░░] 50%.
-Delete All Tasks
-Clears all tasks and points with one click.
-Folder Structure
-Copy code
 
-StudentTaskBot/
-│
-├─ TaskBot.py         # Main bot code
-├─ tasks.json         # User task data (auto-generated)
-├─ .env               # Secret bot token (optional)
-├─ .gitignore         # Ignore secrets and cache
-├─ requirements.txt   # Dependencies
-└─ README.md          # This documentation
-Notes & Tips
-Keep tasks.json private if deploying publicly.
-Use a VPS for 24/7 uptime.
-Customize Owner / Support URLs in the inline buttons.
-Custom Font can be modified in to_custom_font() function.
-Enjoy managing your study tasks efficiently! 🎓
+**NOW YOU BOT IS START**
+
+<img width="1536" height="1024" alt="1000040714" src="https://github.com/user-attachments/assets/a9217d53-4c6a-492d-8e6b-a5f8e9f7d876" />
+
