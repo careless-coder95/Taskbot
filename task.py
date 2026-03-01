@@ -26,11 +26,11 @@ user_points = {}  # Gamification points
 def to_custom_font(text):
     mapping = {
         "A":"ᴧ","B":"ʙ","C":"ᴄ","D":"ᴅ","E":"ᴇ","F":"ꜰ","G":"ɢ","H":"ʜ",
-        "I":"ɪ","J":"ᴊ","K":"ᴋ","L":"ʟ","M":"ᴍ","N":"η","O":"ᴏ","P":"ᴘ",
+        "I":"ɪ","J":"ᴊ","K":"ᴋ","L":"ʟ","M":"ᴍ","N":"ɴ","O":"ᴏ","P":"ᴘ",
         "Q":"ǫ","R":"ʀ","S":"ꜱ","T":"ᴛ","U":"ᴜ","V":"ᴠ","W":"ᴡ","X":"x",
         "Y":"ʏ","Z":"ᴢ",
         "a":"ᴀ","b":"ʙ","c":"ᴄ","d":"ᴅ","e":"ᴇ","f":"ꜰ","g":"ɢ","h":"ʜ",
-        "i":"ɪ","j":"ᴊ","k":"ᴋ","l":"ʟ","m":"ᴍ","n":"η","o":"ᴏ","p":"ᴘ",
+        "i":"ɪ","j":"ᴊ","k":"ᴋ","l":"ʟ","m":"ᴍ","n":"ɴ","o":"ᴏ","p":"ᴘ",
         "q":"ǫ","r":"ʀ","s":"ꜱ","t":"ᴛ","u":"ᴜ","v":"ᴠ","w":"ᴡ","x":"x",
         "y":"ʏ","z":"ᴢ",
     }
@@ -80,16 +80,26 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     username = update.effective_user.first_name
     if user_id not in tasks: tasks[user_id]=[]
     welcome = f"""
-{to_custom_font('👋 Hello')} {to_custom_font(username)}!
-{to_custom_font('Welcome to the Student Task Bot 🎓')}
-{to_custom_font('Use buttons below to navigate and manage your study tasks efficiently')}
-"""
+    **❍ ʜᴇʟʟᴏ {username} 🤍**
+    **❍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴛᴀꜱᴋ ʙᴏᴛ 🎓**
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **❍ ᴜꜱᴇ ᴛʜᴇ ʙᴜᴛᴛᴏηꜱ ʙᴇʟᴏᴡ ᴏʀ ᴄʟɪᴄᴋ ᴏɴ /help ᴛᴏ ηᴀᴠɪɢᴀᴛᴇ ᴧηᴅ ᴍᴀηᴀɢᴇ ʏᴏᴜʀ ꜱᴛᴜᴅʏ ᴛᴀꜱᴋꜱ ᴇꜰꜰɪᴄɪᴇηᴛʟʏ. ✨**
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **❍ ᴛᴀꜱᴋ ᴄᴏᴍᴍᴀηᴅꜱ 📜**
+    **❍ ꜱᴄʜᴇᴅᴜʟᴇ ᴍᴀηᴀɢᴇᴍᴇηᴛ 📝**
+    **❍ ᴘʀᴏɢʀᴇss & sᴛᴀᴛs  📊**
+    **❍ ᴘʀᴏɢʀᴇꜱꜱ ᴛʀᴀᴄᴋɪηɢ** 
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **╔════════════════════**
+    **✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴧʀᴇʟᴇꜱꜱ ᴄᴏᴅᴇʀ ✦**
+    **╚════════════════════╝**
+    """
     keyboard = [
         [InlineKeyboardButton(to_custom_font("How to Use Me"), callback_data="how_to_use")],
         [InlineKeyboardButton(to_custom_font("Student Mode"), callback_data="student_mode")],
         [
-            InlineKeyboardButton(to_custom_font("Owner"), url="https://t.me/YourOwnerUsername"),
-            InlineKeyboardButton(to_custom_font("Support"), url="https://t.me/YourSupportUsername")
+            InlineKeyboardButton(to_custom_font("Owner"), url="t.me/CarelessxOwner"),
+            InlineKeyboardButton(to_custom_font("Support"), url="https://t.me/ll_CarelessxCoder_ll")
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -103,12 +113,13 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     msg = f"""
-{to_custom_font('👋 Hello')} {to_custom_font(update.effective_user.first_name)}!
-{to_custom_font('Press Student Mode to:')}
-1️⃣ Add new tasks (Subject → Lesson → Title → Deadline)
-2️⃣ View your tasks
-3️⃣ Check progress and points
-"""
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **❍ ᴘʀᴇꜱꜱ ꜱᴛᴜᴅᴇηᴛ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ.**
+    
+    **❍ ꜱᴇᴇ ᴛʜᴇɪʀ ɪɴꜱᴛʀᴜᴄᴛɪᴏηꜱ** 
+    **ᴛᴏ ᴍᴀηᴀɢᴇ ʏᴏᴜʀ ᴛᴀꜱᴋꜱ.🛡**
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    """
     await update.message.reply_text(msg, reply_markup=reply_markup)
 
 # ----------------- Home Page -----------------
@@ -117,9 +128,20 @@ async def home_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
     username = update.callback_query.from_user.first_name
     if user_id not in tasks: tasks[user_id]=[]
     welcome = f"""
-{to_custom_font('👋 Hello')} {to_custom_font(username)}!
-{to_custom_font('Welcome to the Student Task Bot 🎓')}
-"""
+    **❍ ʜᴇʟʟᴏ {username} 🤍**
+    **❍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴛᴀꜱᴋ ʙᴏᴛ 🎓**
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **❍ ᴜꜱᴇ ᴛʜᴇ ʙᴜᴛᴛᴏηꜱ ʙᴇʟᴏᴡ ᴏʀ ᴄʟɪᴄᴋ ᴏɴ /help ᴛᴏ ηᴀᴠɪɢᴀᴛᴇ ᴧηᴅ ᴍᴀηᴀɢᴇ ʏᴏᴜʀ ꜱᴛᴜᴅʏ ᴛᴀꜱᴋꜱ ᴇꜰꜰɪᴄɪᴇηᴛʟʏ. ✨**
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **❍ ᴛᴀꜱᴋ ᴄᴏᴍᴍᴀηᴅꜱ 📜**
+    **❍ ꜱᴄʜᴇᴅᴜʟᴇ ᴍᴀηᴀɢᴇᴍᴇηᴛ 📝**
+    **❍ ᴘʀᴏɢʀᴇss & sᴛᴀᴛs  📊**
+    **❍ ᴘʀᴏɢʀᴇꜱꜱ ᴛʀᴀᴄᴋɪηɢ** 
+    **✦━━━━━━━━━━━━━━━━━━━━✦**
+    **╔════════════════════**
+    **✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴧʀᴇʟᴇꜱꜱ ᴄᴏᴅᴇʀ ✦**
+    **╚════════════════════╝**
+    """
     keyboard = [
         [InlineKeyboardButton(to_custom_font("How to Use Me"), callback_data="how_to_use")],
         [InlineKeyboardButton(to_custom_font("Student Mode"), callback_data="student_mode")],
@@ -147,9 +169,13 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         msg = f"""
-{to_custom_font('👋 Hello')} {to_custom_font(query.from_user.first_name)}!
-{to_custom_font('Press Student Mode to manage tasks')}
-"""
+        **✦━━━━━━━━━━━━━━━━━━━━✦**
+        **❍ ᴘʀᴇꜱꜱ ꜱᴛᴜᴅᴇηᴛ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ.**
+    
+        **❍ ꜱᴇᴇ ᴛʜᴇɪʀ ɪɴꜱᴛʀᴜᴄᴛɪᴏηꜱ** 
+        **ᴛᴏ ᴍᴀηᴀɢᴇ ʏᴏᴜʀ ᴛᴀꜱᴋꜱ.🛡**
+        **✦━━━━━━━━━━━━━━━━━━━━✦**
+        """
         await query.message.reply_text(msg, reply_markup=reply_markup)
 
     # Student Mode
@@ -161,7 +187,31 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             [InlineKeyboardButton(to_custom_font("Back to Home"), callback_data="back_home")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        msg = f"{to_custom_font('Student Mode Menu: Choose an option')}"
+        msg = f"""
+        **╔════════════════╗**
+        **✦ ꜱᴛᴜᴅᴇηᴛ ᴍᴏᴅᴇ ᴍᴇɴᴜ ✦**
+        **╚════════════════╝**
+        **❍ ᴧᴅᴅ ᴛᴀꜱᴋ. 📝**
+        **- ᴄʟɪᴄᴋ ᴛʜɪꜱ ᴛᴏ ᴧᴅᴅ ᴀ ɴᴇᴡ ᴛᴀꜱᴋ**
+        **- ʏᴏᴜ ᴡɪʟʟ ʙᴇ ᴀꜱᴋᴇᴅ:**
+        **• ꜱᴜʙᴊᴇᴄᴛ**
+        **• ᴛᴏᴘɪᴄ**
+        **• ʟᴇꜱꜱᴏɴ**
+        **- ᴀꜰᴛᴇʀ ꜰɪʟʟɪηɢ, ʏᴏᴜʀ ᴛᴀꜱᴋ ᴡɪʟʟ ʙᴇ**
+        **ꜱᴀᴠᴇᴅ**
+        **✦━━━━━━━━━━━━━━━━━━━━✦**
+        **❍ ᴠɪᴇᴡ ʏᴏᴜʀ ᴛᴀꜱᴋ : 📝**
+        **- ꜱᴇᴇ ᴀʟʟ ᴛᴀꜱᴋꜱ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ**  
+        **- ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛᴀꜱᴋꜱ ᴡɪʟʟ ꜱʜᴏᴡ ✅,** 
+            **ɪɴᴄᴏᴍᴘʟᴇᴛᴇ ❌**
+        **✦━━━━━━━━━━━━━━━━━━━━✦**
+        **❍ ʏᴏᴜʀ ᴘʀᴏɢʀᴇꜱꜱ. 📊**
+        **- ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴛᴀꜱᴋꜱ ᴀʀᴇ** 
+          **ᴄᴏᴍᴘʟᴇᴛᴇᴅ** 
+        **- ᴘʀᴏɢʀᴇꜱꜱ ʙᴀʀ ᴀηᴅ ᴘᴏɪηᴛꜱ ᴀʀᴇ**
+          **ꜱʜᴏᴡɴ**
+
+        """
         await query.message.reply_text(msg, reply_markup=reply_markup)
 
     # Back Home
