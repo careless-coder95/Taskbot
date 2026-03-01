@@ -27,31 +27,41 @@ A fully-featured **Telegram bot for students** to manage study tasks, track prog
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/careless-coder95/Taskbot
-cd Taskbt
-pip install -r requirements.txt
+cd Taskbot
+
+```
+```
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 3️⃣ Add your Telegram Bot Token in env
 ```
-BOT_TOKEN=123456789:ABCdefGHIjklMNOpqRS_TUVwxyz
+BOT_TOKEN=here_your_bot_token
 ```
 Make sure Python 3.10+ is installed.
 Install dependencies:
 ```
 pip install -r requirements.txt
 ```
-Run the bot
-```
-python3 task.py
-```
 Use screen or tmux:
 ```
 screen -S StudentBot
-python TaskBot.py
 ```
-# Press Ctrl+A then D to detach
+Then run bot 
+```
+python3 task.py
+```
+**Press Ctrl+A then D to detach**
 
-**NOW YOU BOT IS START**
+# NOW YOU BOT IS START
 
-<img width="1536" height="1024" alt="1000040714" src="https://github.com/user-attachments/assets/a9217d53-4c6a-492d-8e6b-a5f8e9f7d876" />
+# Credits
+**Credit goes to** [Mister Stark](t.me/CarelessxOwner) for the amazing bot framework.
 
+---
+
+# Support
+**Join our support group:** [Click Here](https://t.me/CarelessxWorld)
+
+<img width="1400" height="900" alt="1000040714" src="https://github.com/user-attachments/assets/a9217d53-4c6a-492d-8e6b-a5f8e9f7d876" />
