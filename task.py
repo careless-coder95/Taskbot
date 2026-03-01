@@ -12,7 +12,7 @@ from telegram.ext import (
 from dotenv import load_dotenv
 import os
 
-# ----------------- Load BOT Token -----------------
+# ----------------- Load BOT Token from .env -----------------
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 
